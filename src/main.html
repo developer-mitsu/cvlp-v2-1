@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="テキスト">
+    <script src="https://kit.fontawesome.com/6270f2e9f0.js"></script>
+    <title>アイウエオ</title>
+    <!-- --------- -->
+    <!-- BEM規則メモ -->
+    <!-- --------- -->
+    <!-- ------------------------------------------- -->
+    <!-- 
+
+        ブロックにmarginはつけない
+        htmlの構造とscssの構造(親子関係)は同じにしなくて良い(ていうか分離させる)
+        ブロックの中にブロックがあっても全然構わない
+
+     -->
+    <!-- ------------------------------------------- -->
+
+</head>
+
+<body>
+    <header>
+        <div class="hd-wrap">
+            <h1 class="hd-logo">Code Village</h1>
+            <nav class="hd-nav">
+                <ul>
+                    <li class="hd-nav__item">Code Villageとは</li>
+                    <li class="hd-nav__item">カリキュラム</li>
+                    <li class="hd-nav__item">受講について</li>
+                    <li class="hd-nav__item">料金</li>
+                </ul>
+            </nav>
+            <div class="hd--main-btn">
+                <a href="">電話で聞いてみる</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- ファーストビュー -->
+        <section class="first-view">
+            <div class="eyecatch"></div>
+            <div class="hdline">
+                <ul class="hdline__li">
+                    <li class="hdline__li__item"><span>未経験者大歓迎！</span></li>
+                    <li class="hdline__li__item"><span>レベル別指導！</span></li>
+                    <li class="hdline__li__item"><span>飛び級制度あり！</span></li>
+                </ul>
+                <div class="hdline__copy">
+                    <p class="hdline__copy__top">先端技術を</p>
+                    <p class="hdline__copy__btm">圧倒的な学習量で学ぶ！</p>
+                </div>
+                <div class="hdline--main-btn--shadow">
+                    <div class="hdline--main-btn">
+                        <a href="">無料カウンセリング</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 01 -->
+        <section class="outer">
+            <div class="inner">
+                <div class="title">
+                    <p class="title__num">01</p>
+                    <p class="title__cv">Code Village</p>
+                    <h2 class="title__text">スパルタ教室Code Villageとは??</h2>
+                </div>
+                <div class="about__intro">
+                    <p class="mg-b">プログラミング教室Code Villageは、</p>
+                    <p class="mg-b"><span class="fw-bold">「プログラミングを書けるようになりたい人を、書けるようにすること」</span></p>
+                    <p class="mg-b">に価値をおき運営しております。</p>
+                    <p>案件獲得保証もなければ、転職も確約しておりません。</p>
+                    <p class="mg-b">稼ぐ為の特別なメソッドもございません。</p>
+                    <p>しかし、どの選択肢も取れる様に最大限スキルを伸ばしたい、</p>
+                    <p>そんな事ばかり考え熱中しております。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 01 point -->
+        <section class="point-wrap">
+            <div class="inner">
+                <div class="point">
+                    <div class="point__item point__item--dark">
+                        <div class="point__icon">
+                            <img src="img/point1.png">
+                        </div>
+                        <div class="point__hd">
+                            <p class="point__hd__num">POINT1</p>
+                            <h3 class="point__hd__title">1.圧倒的な学習量</h3>
+                        </div>
+                        <p class="point__desc">
+                            プログラミングスキルを習得する最短の道は「圧倒的な学習を積む事」です。 私達が出来る事は生徒様に学習のマイルストーンを敷いて逸早く課題解決のサポートをする事です。 Code
+                            Villageでは1日3時間以上の学習を強要しており、学習の成果を毎日トレーナーに提出して頂きます。
+                        </p>
+                    </div>
+                    <div class="point__item point__item--light">
+                        <div class="point__icon">
+                            <img src="img/point2.png">
+                        </div>
+                        <div class="point__hd">
+                            <p class="point__hd__num">POINT2</p>
+                            <h3 class="point__hd__title">2.質問し放題</h3>
+                        </div>
+                        <p class="point__desc">
+                            オフラインの講義外でも質問し放題です。優秀な講師陣がPCベタ張りで即レスを心がけております。テキストでの質問だけではなくSkypeを用いた課題解決が可能となっており、それは全てコンテンツプラットフォームにストックされ誰でもアクセス可能です。初学者の課題は重複するケースが多々あり、それを共有する事で空き時間に効率の良いインプットをする事が可能です。
+                        </p>
+                    </div>
+                    <div class="point__item point__item--dark">
+                        <div class="point__icon">
+                            <img src="img/point3.png">
+                        </div>
+                        <div class="point__hd">
+                            <p class="point__hd__num">POINT3</p>
+                            <h3 class="point__hd__title">3.事前学習とレベル分け</h3>
+                        </div>
+                        <p class="point__desc">
+                            受講開始二週間前に配布される全10回(約10時間)に及ぶ動画コンテンツを使用して初回講義までにHTML/CSSの基礎を習得して頂きます。そして7回目/全18回の講義ではクラス分けを実施し、それぞれのクラスに最適な講義を行ってまいります。努力した人にはそれだけの価値を届けたい思いでスクールにヒエラルキーを見出しました。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02 -->
+        <section class="outer">
+            <div class="inner">
+                <div class="title">
+                    <p class="title__num">02</p>
+                    <p class="title__cv">Code Village</p>
+                    <h2 class="title__text">スパルタ教室Code Villageとは??</h2>
+                </div>
+                <div class="common-item-wrap">
+                    <div class="common-item">
+                        <div class="common-item__title">
+                            <p>FLOW1</p>
+                            <h3>事前課題に取り組む</h3>
+                        </div>
+                        <div class="common-item__text">
+                            <p>入校前に事前課題としてhtml/cssの基礎理解を目指し、 簡易的な1枚のHPのコーディングが出来るまで何度も繰り返し実践して頂きます。
+                                そして入校直前に渡されるテストモックを実装して頂き、知識の定着を確認します。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="common-item">
+                        <div class="common-item__title">
+                            <p>FLOW1</p>
+                            <h3>事前課題に取り組む</h3>
+                        </div>
+                        <div class="common-item__text">
+                            <p>入校前に事前課題としてhtml/cssの基礎理解を目指し、 簡易的な1枚のHPのコーディングが出来るまで何度も繰り返し実践して頂きます。
+                                そして入校直前に渡されるテストモックを実装して頂き、知識の定着を確認します。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="common-item">
+                        <div class="common-item__title">
+                            <p>FLOW1</p>
+                            <h3>事前課題に取り組む</h3>
+                        </div>
+                        <div class="common-item__text">
+                            <p>入校前に事前課題としてhtml/cssの基礎理解を目指し、 簡易的な1枚のHPのコーディングが出来るまで何度も繰り返し実践して頂きます。
+                                そして入校直前に渡されるテストモックを実装して頂き、知識の定着を確認します。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="common-item-wrap alfa">
+                    <div class="common-item alfa">
+                        <div class="common-item__title alfa">
+                            <p>＋α</p>
+                            <h3>トレーナー制度</h3>
+                        </div>
+                        <div class="common-item__text alfa">
+                            <p>入校前に事前課題としてhtml/cssの基礎理解を目指し、 簡易的な1枚のHPのコーディングが出来るまで何度も繰り返し実践して頂きます。
+                                そして入校直前に渡されるテストモックを実装して頂き、知識の定着を確認します。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="common-item alfa">
+                        <div class="common-item__title alfa">
+                            <p>＋α</p>
+                            <h3>教室開放</h3>
+                        </div>
+                        <div class="common-item__text alfa">
+                            <p>入校前に事前課題としてhtml/cssの基礎理解を目指し、 簡易的な1枚のHPのコーディングが出来るまで何度も繰り返し実践して頂きます。
+                                そして入校直前に渡されるテストモックを実装して頂き、知識の定着を確認します。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="common-item alfa">
+                        <div class="common-item__title alfa">
+                            <p>＋α</p>
+                            <h3>オンライン質問</h3>
+                        </div>
+                        <div class="common-item__text alfa">
+                            <p>入校前に事前課題としてhtml/cssの基礎理解を目指し、 簡易的な1枚のHPのコーディングが出来るまで何度も繰り返し実践して頂きます。
+                                そして入校直前に渡されるテストモックを実装して頂き、知識の定着を確認します。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02 online -->
+        <section class="online">
+            <div class="online--filter">
+                <div class="inner">
+                    <!-- <img class="online__img" src="img/cvc_pc.png" alt=""> -->
+                    <div class="online__text">
+                        <h3>Code Village Online</h3>
+                        <p>オフラインの授業で学んだ事をCode Village
+                            Onlineを通じで復習しましょう。分かりやすい復習用ドキュメントはスマートフォンでも閲覧出来るので、隙間時間に効率よくインプットをする事が可能です。
+                            また、毎週出される課題をダウンロードし取り組みましょう。 課題終了後はSNSや学習成果日報に知識をアウトプットしスキルを定着させます。
+                            SNSや学習成果日報を用いた学習管理はコミットと継続を促し、更に早くスキル習得をする事が可能です。</p>
+                        <p></p>
+                        <p></p>
+                        <a href="">詳しくはこちら</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02 事前課題 -->
+        <section class="pre-cha">
+            <div class="pre-cha--filter">
+                <div class="inner">
+                    <!-- <img class="pre-cha--img" src="img/code.png" alt=""> -->
+                    <div class="pre-cha__text">
+                        <h3>Code Village Online</h3>
+                        <p>オフラインの授業で学んだ事をCode Village
+                            Onlineを通じで復習しましょう。分かりやすい復習用ドキュメントはスマートフォンでも閲覧出来るので、隙間時間に効率よくインプットをする事が可能です。
+                            また、毎週出される課題をダウンロードし取り組みましょう。 課題終了後はSNSや学習成果日報に知識をアウトプットしスキルを定着させます。
+                            SNSや学習成果日報を用いた学習管理はコミットと継続を促し、更に早くスキル習得をする事が可能です。</p>
+                        <p></p>
+                        <p></p>
+                        <a href="">詳しくはこちら</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 03 -->
+        <section class="outer">
+            <div class="inner">
+                <div class="title">
+                    <p class="title__num">03</p>
+                    <p class="title__cv">Code Village</p>
+                    <h2 class="title__text">スパルタ教室Code Villageとは??</h2>
+                </div>
+                <div class="curriculum__list">
+                    <div class="curriculum__item">
+                        <h3 class="curriculum__item__title">
+                            フロントエンド初級
+                        </h3>
+                        <p class="curriculum__item__text">
+                            HTML/CSSの基礎を学習し、基礎的なマークアップ技術を身に着けます。 課題に取り組み、受講期間中を通してマークアップの経験値を積むことで、高い水準まで技術を引き上げます。
+                        </p>
+                        <ul>
+                            <li>HTML/CSS</li>
+                            <li>HTML/CSS</li>
+                            <li>HTML/CSS</li>
+                        </ul>
+                    </div>
+                    <div class="curriculum__item">
+                        <h3 class="curriculum__item__title">
+                            フロントエンド初級
+                        </h3>
+                        <p class="curriculum__item__text">
+                            HTML/CSSの基礎を学習し、基礎的なマークアップ技術を身に着けます。 課題に取り組み、受講期間中を通してマークアップの経験値を積むことで、高い水準まで技術を引き上げます。
+                        </p>
+                        <ul>
+                            <li>HTML/CSS</li>
+                            <li>HTML/CSS</li>
+                            <li>HTML/CSS</li>
+                        </ul>
+                    </div>
+                    <div class="curriculum__item">
+                        <h3 class="curriculum__item__title">
+                            フロントエンド初級
+                        </h3>
+                        <p class="curriculum__item__text">
+                            HTML/CSSの基礎を学習し、基礎的なマークアップ技術を身に着けます。 課題に取り組み、受講期間中を通してマークアップの経験値を積むことで、高い水準まで技術を引き上げます。
+                        </p>
+                        <ul>
+                            <li>HTML/CSS</li>
+                            <li>HTML/CSS</li>
+                            <li>HTML/CSS</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="curriculum--main-btn">
+                    <a href="">詳細を見る</a>
+                </div>
+            </div>
+        </section>
+        <!-- 受講料 -->
+        <section class="price">
+            <h3>受講料について</h3>
+            <div class="price__wrap">
+                <p>3ヶ月（12週間）のプログラム</p>
+                <p><span>¥350,000</span><span>(税別)</span></p>
+                <p>分割：クレジットカードによるご分割</p>
+            </div>
+        </section>
+        <!-- 04 -->
+        <section class="outer">
+            <div class="inner">
+                <div class="title">
+                    <p class="title__num">04</p>
+                    <p class="title__cv">Code Village</p>
+                    <h2 class="title__text">スパルタ教室Code Villageとは??</h2>
+                </div>
+                <div class="voice__slide">
+                    <div class="voice__item">
+                        <div class="voice__item__img">
+
+                        </div>
+                        <div class="voice__item__text">
+                            <p>プログラミング技術を持っていると有利！</p>
+                            <p>Y.Yさん</p>
+                            <p>他の日に多くの時学習時間を確保できるよう努力しましょう。質問システムを活用し、効率を意識しながら学習できれば大丈夫です。</p>
+                        </div>
+                        <a href="">もっと見る</a>
+                    </div>
+                    <div class="voice__item">
+                        <div class="voice__item__img">
+
+                        </div>
+                        <div class="voice__item__text">
+                            <p>プログラミング技術を持っていると有利！</p>
+                            <p>Y.Yさん</p>
+                            <p>他の日に多くの時学習時間を確保できるよう努力しましょう。質問システムを活用し、効率を意識しながら学習できれば大丈夫です。</p>
+                        </div>
+                        <a href="">もっと見る</a>
+                    </div>
+                    <div class="voice__item">
+                        <div class="voice__item__img">
+
+                        </div>
+                        <div class="voice__item__text">
+                            <p>プログラミング技術を持っていると有利！</p>
+                            <p>Y.Yさん</p>
+                            <p>他の日に多くの時学習時間を確保できるよう努力しましょう。質問システムを活用し、効率を意識しながら学習できれば大丈夫です。</p>
+                        </div>
+                        <a href="">もっと見る</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 05 -->
+        <section class="outer q-a">
+            <div class="inner">
+                <div class="title">
+                    <p class="title__num">05</p>
+                    <p class="title__cv">Code Village</p>
+                    <h2 class="title__text">スパルタ教室Code Villageとは??</h2>
+                </div>
+                <div class="common-item-wrap">
+                    <div class="common-item">
+                        <div class="common-item__title">
+                            <p>FLOW1</p>
+                            <h3>事前課題に取り組む</h3>
+                        </div>
+                        <div class="common-item__text">
+                            <p>入校前に事前課題としてhtml/cssの基礎理解を目指し、 簡易的な1枚のHPのコーディングが出来るまで何度も繰り返し実践して頂きます。
+                                そして入校直前に渡されるテストモックを実装して頂き、知識の定着を確認します。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="common-item">
+                        <div class="common-item__title">
+                            <p>FLOW1</p>
+                            <h3>事前課題に取り組む</h3>
+                        </div>
+                        <div class="common-item__text">
+                            <p>入校前に事前課題としてhtml/cssの基礎理解を目指し、 簡易的な1枚のHPのコーディングが出来るまで何度も繰り返し実践して頂きます。
+                                そして入校直前に渡されるテストモックを実装して頂き、知識の定着を確認します。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="common-item">
+                        <div class="common-item__title">
+                            <p>FLOW1</p>
+                            <h3>事前課題に取り組む</h3>
+                        </div>
+                        <div class="common-item__text">
+                            <p>入校前に事前課題としてhtml/cssの基礎理解を目指し、 簡易的な1枚のHPのコーディングが出来るまで何度も繰り返し実践して頂きます。
+                                そして入校直前に渡されるテストモックを実装して頂き、知識の定着を確認します。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="common-item">
+                        <div class="common-item__title">
+                            <p>FLOW1</p>
+                            <h3>事前課題に取り組む</h3>
+                        </div>
+                        <div class="common-item__text">
+                            <p>入校前に事前課題としてhtml/cssの基礎理解を目指し、 簡易的な1枚のHPのコーディングが出来るまで何度も繰り返し実践して頂きます。
+                                そして入校直前に渡されるテストモックを実装して頂き、知識の定着を確認します。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="common-item">
+                        <div class="common-item__title">
+                            <p>FLOW1</p>
+                            <h3>事前課題に取り組む</h3>
+                        </div>
+                        <div class="common-item__text">
+                            <p>入校前に事前課題としてhtml/cssの基礎理解を目指し、 簡易的な1枚のHPのコーディングが出来るまで何度も繰り返し実践して頂きます。
+                                そして入校直前に渡されるテストモックを実装して頂き、知識の定着を確認します。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="common-item">
+                        <div class="common-item__title">
+                            <p>FLOW1</p>
+                            <h3>事前課題に取り組む</h3>
+                        </div>
+                        <div class="common-item__text">
+                            <p>入校前に事前課題としてhtml/cssの基礎理解を目指し、 簡易的な1枚のHPのコーディングが出来るまで何度も繰り返し実践して頂きます。
+                                そして入校直前に渡されるテストモックを実装して頂き、知識の定着を確認します。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="outer">
+            <div class="inner">
+                <div class="title">
+                    <p class="title__num">06</p>
+                    <p class="title__cv">Code Village</p>
+                    <h2 class="title__text">スパルタ教室Code Villageとは??</h2>
+                </div>
+                <div class="acccess__map">
+                    <div>
+                        <iframe src="" frameborder="0"></iframe>
+                    </div>
+                    <div class="address">
+                        <h4>Code Village 東京池袋校</h4>
+                        <p>〒171-0022</p>
+                        <p>住所</p>
+                        <p>コメマーク</p>
+                    </div>
+                </div>
+                <div class="acccess__map">
+                    <div>
+                        <iframe src="" frameborder="0"></iframe>
+                    </div>
+                    <div class="address">
+                        <h4>Code Village 東京池袋校</h4>
+                        <p>〒171-0022</p>
+                        <p>住所</p>
+                        <p>コメマーク</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="inner ft-inner">
+            <div class="ft-top">
+                <div class="ft-sns-link">
+                    <span class="icon-insta">
+                        <i class="fab fa-instagram"></i>
+                    </span>
+                    <span class="icon-tw">
+                        <i class="fab fa-twitter"></i>
+                    </span>
+                </div>
+                <p class="ft-logo">Code Village</p>
+                <ul class="ft-list">
+                    <li>Code Villageとは</li>
+                    <li>カリキュラム</li>
+                    <li>受講について</li>
+                    <li>料金</li>
+                </ul>
+            </div>
+            <div class="ft-inc">
+                <small>© 2007-2019 Permil inc.</small>
+            </div>
+            <div class="ft-fixed">
+                <div class="ft-fixed__wrap">
+                    <p>あなたも圧倒的な学習をしてモダンな技術を身につけませんか？</p>
+                    <div class="ft-main-btn">
+                        <a href="">電話で聞いてみる</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
