@@ -1,7 +1,11 @@
 $grd-toright :linear-gradient(to right, #FFC119,#FF016A);
 $grd-toleft :linear-gradient(to left, #FFC119,#FF016A);
 $grd-tobottom : linear-gradient(to bottom, #FFC119,#FF016A);
+$grd-totop : linear-gradient(to top, #FFC119,#FF016A);
 $fc-white: #fff;
+$p-mg-b: 1.7em;
+$voice-img-w: 24.5vw;
+$voice-item-padtop: $voice-img-w/2;
 
 @mixin centering-lh($height){
   height: $height;
@@ -91,8 +95,18 @@ body {
   line-height: 1;
 }
 
+a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
 p {
   line-height: 1.7;
+}
+
+.mg-b {
+  margin-bottom: $p-mg-b;
 }
 
 .outer {
@@ -159,6 +173,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 100000;
 }
 header::after {
   @include border-g;
@@ -269,17 +284,13 @@ header::after {
 //  about  //
 /////////////
 
-$about-mb: 1.7em;
 .about__intro {
   text-align: center;  
-  & .mg-b {
-    margin-bottom: $about-mb; 
-  }
   & .fw-bold {
     $fs: 1.5em;
     font-size: $fs;
     font-weight: bold;
-    margin-bottom: ($about-mb / $fs);
+    margin-bottom: ($p-mg-b / $fs);
   }
 }
 
@@ -326,7 +337,7 @@ $about-mb: 1.7em;
 }
 
 ///////////////////
-//   02  flow    //
+//   02  flow(q-a)   //
 ///////////////////
 
 .common-item-wrap {
@@ -371,10 +382,16 @@ $about-mb: 1.7em;
     width: 100%;
   }
   &__title.alfa {
-    width: 45%;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+  &__title-out.alfa {
+    width: 45%;
+    background: $grd-totop;
+    padding-left: 5px;
   }
 }
 
@@ -390,17 +407,63 @@ $about-mb: 1.7em;
   background-image: url(../img/cvo.jpeg);
   background-size: cover;
   background-position: center;
-  height: 300px;
   &--filter {
     width: 100%;
     height: 100%;
     background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    padding: 50px 0;
   }
 }
 
-////////////////
-// 02 pre-cha //
-////////////////
+.online-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.online__img {
+  width: 40%;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.online__text {
+  width: 50%;
+}
+
+.online__text__hd {
+  line-height: 1;
+  border-bottom: 1px solid #000;
+  padding-bottom: 1.4rem;
+  margin-bottom: 1.4rem;
+  *:first-child {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.4em;
+    & + * {
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+  }
+}
+
+.online__text__btn {
+  @include centering-lh(47px);
+  background-color: #000;
+  color: $fc-white;
+  width: 195px;
+  text-align: center;
+  border-radius: 5px;
+  margin-left: auto;
+  a {
+    display: block;
+  }
+}
+
+///////////////
+//02 pre-cha //
+///////////////
 .pre-cha {
   background-image: url(../img/code.png);
   background-size: cover;
@@ -408,8 +471,43 @@ $about-mb: 1.7em;
   &--filter {
     width: 100%;
     height: 100%;
-    background: linear-gradient(to left, rgba(#FF006B, 0.1), rgba(#FFCA16, 0.1));
+    background: linear-gradient(to left, rgba(#FF006B, 1), rgba(#FFCA16, 1));
+    padding: 50px 0;
   }
+}
+
+.pre-cha-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pre-movie {
+  width: 46%;
+  background-color: #000;
+}
+
+.pre-cha__text {
+  width: 50%;
+  color: $fc-white;
+}
+
+.pre-cha__text__hd {
+  line-height: 1;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 1.4rem;
+  margin-bottom: 1.4rem;
+  *:first-child {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}
+
+.pre-cha-btn {
+  width: 100%;
+  text-align: center;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  @include centering-lh(70px);
 }
 
 ///////////////////
@@ -420,13 +518,53 @@ $about-mb: 1.7em;
   display: flex;
   justify-content: space-between;
   width: 100%;
+  margin-bottom: 90px;
 }
-.curriculum__item {
+.curriculum__item__out {
   width: 28%;
-  &__title {
-    text-align: center;
+  border-radius: 5px;
+  background: $grd-totop;
+  padding: 5px;
+  &__in {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 13% 8% 10%
   }
 }
+
+.curriculum__item__title {
+  text-align: center;
+  font-size: 1.28rem;
+  font-weight: bold;
+  padding: 1.39em 0.4em;//左右は0でいいかも
+}
+
+.curriculum__item__text {
+  margin-bottom: 2em;
+  &:before {
+    @include border-g;
+    width: 84%;
+    margin: 0 auto 2em;
+  }
+}
+
+.curriculum__item__check {
+  li{
+    display: flex;
+    align-items: center;
+    line-height: 1.9em;
+    &:before {
+      display: inline-block;
+      content: "";
+      background-image: url(../img/check.png);
+      background-size: cover;
+      width: 1.4em;
+      height: 1.4em;
+      margin-right: 1em;
+    }
+  }
+}
+
 .curriculum--main-btn {
   @include main-btn(320px, 50px);
   margin: 0 auto;
@@ -440,10 +578,110 @@ $about-mb: 1.7em;
   background-image: url(../img/cvo.jpeg);
   background-size: cover;
   background-position: center;
+  text-align: center;
+  padding: 67px 0 100px;
   &__wrap {
-    background-color: rgba(#fff, 0.4);
+    background-color: rgba(#fff, 0.76);
+    width: 40%;
+    min-width: 300px;
+    margin: 0 auto;
+    padding: 67px 0;
+    small {
+      font-size: 0.9rem;
+    }
+    & * + * {
+      margin-top: 0.4rem;
+    }
   }
 }
+
+.price__hd {
+  // text-align: center;
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  &:after {
+    display: block;
+    content: "";
+    border-top: 1px solid #000;
+    margin: 1em auto;
+    width: 86%;
+  }
+}
+
+.price__price, .price__tax {
+  display: inline-block;
+}
+
+.price__price {
+  font-family: "ヒラギノ角ゴシック";
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+.price__tax {
+  margin-left: 1em;
+}
+
+
+///////////////////
+// 04 voice      //
+///////////////////
+
+.voice__slide {
+  margin-top: $voice-img-w * 0.9;
+  // margin-top: $voice-img-w * 0.6 + 90px);
+
+  display: flex;
+  justify-content: center;
+}
+
+.voice__item {
+  position: relative;
+  width: 42%;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
+  padding: $voice-item-padtop 4vw 2.5vw;
+  &__text {
+    margin-bottom: 3rem;
+  }
+  &__intro {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+  &__name {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 1em 0 1.5em;
+    &:after {
+      @include border-g;
+      width: 8em;
+      height: 2px;
+      margin: 0.7em auto;
+    }
+  }
+  &__more {
+    text-align: right;
+    a {
+      display: inline;
+    }
+  }
+}
+
+.voice__item__img {
+  transform: translate(-50%,-50%);
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  width: $voice-img-w;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+  img {
+    width: 100%;
+  }
+}
+
 
 ///////////////////
 // 05 q a        //
@@ -451,7 +689,68 @@ $about-mb: 1.7em;
 
 .q-a {
   background-color: #fafafa;
+  .common-item-wrap {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap: 40px 8%;
+  }
 }
+
+.common-item {// 詳細度調整用
+  &__title {// 詳細度調整用
+    .question {
+      font-family: "ヒラギノ角ゴシック";
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: $fc-white;
+    }
+    .answer {
+      font-size: 1rem;
+      font-weight: normal;
+    }
+  }
+}
+
+
+
+///////////////////
+// 06 access     //
+///////////////////
+
+.access {
+  display: flex;
+  justify-content: space-between;
+  height: 21rem;
+  &-tokyo {
+    margin-bottom: 40px;
+  }
+}
+
+.map {
+  width: 59%;
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+.address {
+  position: relative;
+  width: 38%;
+  & > * + * {
+    margin-top: 1.5rem;
+  }
+}
+
+.school {
+  font-size: 1.5rem;
+}
+
+.address-main-btn {
+  @include main-btn(234px, 37px);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
 
 
 /////////////
@@ -462,6 +761,7 @@ footer {
   color: $fc-white;
   background-color: #000;
   padding-top: 3rem;
+  z-index: 100000;
 }
 
 .ft-inner {
@@ -473,6 +773,9 @@ footer {
   margin-bottom: 1.3em;
   line-height: 1;
   @include logo;
+  a {
+    display: inline;
+  }
 }
 
 .ft-sns-link {
@@ -501,6 +804,9 @@ footer {
       display: inline-block;
       content: "/";
       margin: 0 1rem;
+    }
+    a {
+      display: inline;
     }
   }
 }
