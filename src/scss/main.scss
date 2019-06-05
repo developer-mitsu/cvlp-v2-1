@@ -278,7 +278,17 @@ header::after {
 }
 .hdline--main-btn {
   @include main-btn(375px, 55px);
+  a {
+    position: relative;
+  }
+  .play-icon {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 2em;
+  }
 }
+
 
 /////////////
 //  about  //
@@ -627,17 +637,25 @@ header::after {
 // 04 voice      //
 ///////////////////
 
+.inner--voice {
+  overflow: hidden;
+}
+
 .voice__slide {
   margin-top: $voice-img-w * 0.9;
   // margin-top: $voice-img-w * 0.6 + 90px);
-
   display: flex;
   justify-content: center;
+  width: 100%;
+  & > * + * {
+    margin-left: 30px;
+  }
 }
 
 .voice__item {
   position: relative;
   width: 42%;
+  flex-shrink: 0;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
   padding: $voice-item-padtop 4vw 2.5vw;
   &__text {
