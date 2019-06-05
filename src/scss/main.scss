@@ -638,7 +638,9 @@ header::after {
 ///////////////////
 
 .inner--voice {
-  overflow: hidden;
+  overflow-x: hidden;
+  padding-bottom: 6px;
+  // box-shadow対策
 }
 
 .voice__slide {
