@@ -196,9 +196,20 @@ header::after {
   grid-template-areas: 
     "logo nav btn";
   grid-template-columns: 43% 38% 1fr;
+    @include tab {
+      grid-template-areas:
+        "logo btn hum";
+      grid-template-columns: 1fr 150px 52px;
+    }
   align-items: center;
   height: 60px;//=first-viewのmargin-top
+  @include sp {
+    height: 44px;
+  }
   padding: 0 2%;
+  @include tab {
+    padding: 0 15px;
+  }
 }
 
 .hd-logo {
@@ -212,6 +223,9 @@ header::after {
     display: inline-block;
     margin-right: 3%;
   }
+  @include tab {
+    display: none;
+  }
 }
 
 .hd--main-btn {
@@ -219,8 +233,42 @@ header::after {
   justify-self: end;
   @include main-btn(100%, 36px) {
     max-width: 226px;
-  };
+  }
+  @include tab {
+    border-radius: 0;
+    @include centering-lh(60px);
+  }
+  @include sp {
+    @include centering-lh(44px);
+  }
 }
+
+.hum-bar {
+  display: none;
+}
+
+.hd-nav--sp {
+  display: none;
+}
+
+///////////////////////////
+// ハンバーガー(sp,tab用) ///
+///////////////////////////
+@include tab {
+
+
+  .hd-nav {
+    display: none;
+    &--sp {
+      // display: block;
+    }
+  }
+  .hum-bar {
+    // display: block;
+      grid-area: hum;
+  }
+}
+
 
 ////////////////////////
 //   ファーストビュー   //
@@ -231,6 +279,9 @@ header::after {
   grid-auto-rows: minmax(1fr, auto);
   grid-template-columns: 4fr 3fr;
   margin-top: 60px;//=headerのheight 
+  @include sp {
+    margin-top: 44px;
+  }
   height: 675px;
   background-image: url(../img/top.jpeg);
   background-size: cover;
