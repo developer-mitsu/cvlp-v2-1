@@ -1,3 +1,6 @@
+@import "reset";
+@import "lib";
+
 $grd-toright :linear-gradient(to right, #FFC119,#FF016A);
 $grd-toleft :linear-gradient(to left, #FFC119,#FF016A);
 $grd-tobottom : linear-gradient(to bottom, #FFC119,#FF016A);
@@ -129,28 +132,37 @@ p {
     "num text"
     "bd bd";
   grid-template-columns: 2fr 5fr;
+  @include sp {
+    width: 242px;
+  }
   & * {
     line-height: 1;
   }
   &__num {
-    $fs: 5.7rem;
     grid-area: num;
-    font-size: $fs;
+    font-size: 5.7rem;
     font-weight: bold;
+    @include sp {
+      font-size: 3.14rem;
+    }
   }
   &__cv {
-    $fs: 2.5rem;
     grid-area: cv;
-    font-size: $fs;
+    font-size: 2.5rem;
     font-weight: bold;
     margin-top: 2px;
+    @include sp {
+      font-size: 1.36rem;
+    }
   }
   &__text {
-    $fs: 1.4rem;
     grid-area: text;
-    font-size: $fs;
+    font-size: 1.4rem;
     font-weight: normal;
     margin-top: 3px;
+    @include sp {
+      font-size: 0.79rem;
+    }
   }
   &:after {
     grid-area: bd;
