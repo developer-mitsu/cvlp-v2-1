@@ -639,13 +639,18 @@ header::after {
 
 .inner--voice {
   overflow-x: hidden;
-  padding-bottom: 6px;
-  // box-shadow対策
+  padding-bottom: 6px; // box-shadow対策
+  &:before, &:after {
+    font-size: 10em;
+    line-height: 1;
+    @include font-grd($grd-totop);
+  }
 }
 
 .voice__slide {
   margin-top: $voice-img-w * 0.9;
   // margin-top: $voice-img-w * 0.6 + 90px);
+  position: relative;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -660,6 +665,7 @@ header::after {
   flex-shrink: 0;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
   padding: $voice-item-padtop 4vw 2.5vw;
+  opacity: 0.5;
   &__text {
     margin-bottom: 3rem;
   }
@@ -684,6 +690,23 @@ header::after {
     text-align: right;
     a {
       display: inline;
+    }
+  }
+}
+
+// アニメーション
+.voice__item{
+  transform: scale(0.8);
+  transition: all 600ms;
+  transition-timing-function: cubic-bezier(0.76, 2.21, 0.65, 0.49);
+  &:hover {
+    transform: scale(0.85);
+  }
+  &.is-center {
+    transform: scale(0.9);
+    opacity: 1;
+    &:hover {
+      transform: scale(1.0);
     }
   }
 }
