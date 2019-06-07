@@ -1,0 +1,15 @@
+/////////////
+//  about  //
+/////////////
+
+.about__intro {
+  text-align: center;  
+  & .fw-bold {
+    $fs: 1.5em;
+    font-size: $fs;
+    font-weight: bold;
+    margin-bottom: ($p-mg-b / $fs);
+  }
+}
+
+// mg-bはcommonに入ってます

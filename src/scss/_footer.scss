@@ -1,0 +1,99 @@
+
+/////////////
+//  footer //
+/////////////
+
+footer {
+  color: $fc-white;
+  background-color: #000;
+  padding-top: 3rem;
+  z-index: 100000;
+}
+
+.ft-inner {
+  position: relative;
+}
+
+.ft-logo {
+  font-size: 1.6rem;
+  margin-bottom: 1.3em;
+  line-height: 1;
+  @include logo;
+  a {
+    display: inline;
+  }
+}
+
+.ft-sns-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.icon-insta, .icon-tw {
+  display: inline-block;
+  width: 1.75rem;
+  height: 1.75rem;
+  & i {
+    display: inline-block;
+    font-size: 1.5em;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.ft-list {
+  margin-bottom: 5em;
+  li {
+    display: inline-block;
+    & + *:before {
+      display: inline-block;
+      content: "/";
+      margin: 0 1rem;
+    }
+    a {
+      display: inline;
+    }
+  }
+}
+
+.ft-sns-link {
+  color: white;
+}
+
+
+
+.ft-inc {
+  margin-bottom: 60px;//ft-fixedのheightと同値
+  border-top: 1px solid white;
+  padding: 1.8em;
+  & small {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+}
+.ft-fixed {
+  $height: 60px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: #000;
+  width: 100%;
+  height: $height;
+  &__wrap {
+    display: flex;
+    width: 56%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    & > p {
+      font-weight: bold;
+      @include centering-lh($height);
+    }
+  }
+}
+
+.ft-main-btn {
+  @include main-btn(226px, 36px);
+}
