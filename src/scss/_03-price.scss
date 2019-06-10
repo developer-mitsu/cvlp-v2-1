@@ -1,0 +1,52 @@
+///////////////////
+// 03 price      //
+///////////////////
+
+.price {
+  background-image: url(../img/cvo.jpeg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 67px 0 100px;
+  &__wrap {
+    background-color: rgba(#fff, 0.76);
+    width: 40%;
+    min-width: 300px;
+    margin: 0 auto;
+    padding: 67px 0;
+    small {
+      font-size: 0.9rem;
+    }
+    & * + * {
+      margin-top: 0.4rem;
+    }
+  }
+}
+
+.price__hd {
+  // text-align: center;
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  &:after {
+    display: block;
+    content: "";
+    border-top: 1px solid #000;
+    margin: 1em auto;
+    width: 86%;
+  }
+}
+
+.price__price, .price__tax {
+  display: inline-block;
+}
+
+.price__price {
+  font-family: "ヒラギノ角ゴシック";
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+.price__tax {
+  margin-left: 1em;
+}
+

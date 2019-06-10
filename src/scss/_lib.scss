@@ -1,0 +1,101 @@
+@mixin pc {
+    @media screen and (min-width: 981px){
+      @content
+    }
+  };
+  
+  @mixin tab {
+    @media screen and (max-width: 980px){
+      @content
+    }
+  };
+  
+  @mixin sp {
+    @media screen and (max-width: 599px){
+      @content
+    }
+  };
+
+$grd-toright :linear-gradient(to right, #FFC119,#FF016A);
+$grd-toleft :linear-gradient(to left, #FFC119,#FF016A);
+$grd-tobottom : linear-gradient(to bottom, #FFC119,#FF016A);
+$grd-totop : linear-gradient(to top, #FFC119,#FF016A);
+$fc-white: #fff;
+$p-mg-b: 1.7em;
+$voice-img-w: 24.5vw;
+$voice-item-padtop: $voice-img-w/2;
+
+@mixin centering-lh($height){
+  height: $height;
+  line-height: $height;
+  @content;
+}
+@mixin border-g {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 5px;
+  background: $grd-toleft;
+  @content;
+}
+
+@mixin logo {
+  &:before {
+    display: inline-block;
+    margin-right: 0.25em;
+    content: ">"
+  }
+  &:after {
+    display: inline-block;
+    margin-left: 0.25em;
+    content: "<"
+  }
+}
+
+@mixin main-btn($width, $height, $font-size: 1em, $opacity: 1) {
+  color: $fc-white;
+  font-weight: bold;
+  font-size: $font-size;
+  text-align: center;
+  line-height: $height;
+  width: $width;
+  height: $height;
+  border-radius: $height / 2;
+  background: linear-gradient(to right, rgba(#FFC119, $opacity),rgba(#FF016A, $opacity));
+  @content;
+}
+
+@mixin font-grd ($color: $grd-toright){
+  background-color: $grd-toright;
+  display: inline-block;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: $color;
+  @content;
+}
+
+@mixin common-item {
+   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
+  &__title {
+    color: $fc-white;
+    background-color: #000;
+    padding: 1.5rem 2rem;
+    font-weight: bold;
+    text-align: center;
+    & > *:first-child {// title直下のタグ変更対策
+      font-size: 2.3rem;
+      line-height: 1;
+      margin-bottom: 0.9rem;
+      & + * {// title直下のタグ変更対策
+        font-size: 1.2rem;
+        line-height: 1;
+      }
+    }
+  }
+  &__text {
+    padding: 3.8rem 1.4rem;
+  }
+  @content;
+}

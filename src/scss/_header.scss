@@ -1,0 +1,95 @@
+////////////////
+//   header   //
+////////////////
+
+
+header {
+  background-color: #222;
+  color: $fc-white;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100000;
+}
+header::after {
+  @include border-g;
+}
+
+.hd-wrap {
+  display: grid;
+  grid-template-areas: 
+    "logo nav btn";
+  grid-template-columns: 43% 38% 1fr;
+    @include tab {
+      grid-template-areas:
+        "logo btn hum";
+      grid-template-columns: 1fr 150px 52px;
+    }
+  align-items: center;
+  height: 60px;//=first-viewのmargin-top
+  @include sp {
+    height: 44px;
+  }
+  padding: 0 2%;
+  @include tab {
+    padding: 0 15px;
+  }
+}
+
+.hd-logo {
+  grid-area: logo;
+  @include logo;
+}
+
+.hd-nav {
+  grid-area: nav;
+  &__item {
+    display: inline-block;
+    margin-right: 3%;
+  }
+  @include tab {
+    display: none;
+  }
+}
+
+.hd--main-btn {
+  grid-area: btn;
+  justify-self: end;
+  @include main-btn(100%, 36px) {
+    max-width: 226px;
+  }
+  @include tab {
+    border-radius: 0;
+    @include centering-lh(60px);
+  }
+  @include sp {
+    @include centering-lh(44px);
+  }
+}
+
+.hum-bar {
+  display: none;
+}
+
+.hd-nav--sp {
+  display: none;
+}
+
+///////////////////////////
+// ハンバーガー(sp,tab用) ///
+///////////////////////////
+@include tab {
+
+
+  .hd-nav {
+    display: none;
+    &--sp {
+      // display: block;
+    }
+  }
+  .hum-bar {
+    // display: block;
+      grid-area: hum;
+  }
+}

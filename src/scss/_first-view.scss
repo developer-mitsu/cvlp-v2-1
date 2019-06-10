@@ -1,0 +1,98 @@
+////////////////////////
+//   ファーストビュー   //
+///////////////////////
+
+.first-view {
+  display: grid; 
+  grid-auto-rows: minmax(1fr, auto);
+  grid-template-columns: 4fr 3fr;
+  margin-top: 60px;//=headerのheight 
+  @include sp {
+    margin-top: 44px;
+  }
+  height: 675px;
+  background-image: url(../img/top.jpeg);
+  background-size: cover;
+}
+
+// .eyecatch {
+//   height: 675px;
+// }
+
+.hdline {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.82);
+  color: $fc-white;
+  padding: 90px 40px;
+  &__copy {
+    font-size: 2.5vw;
+    @include sp {
+      font-size: 24px;
+    }
+    font-weight: bold;
+    color: #FFC119;//非対応ブラウザ用
+    // @include 
+    &__top {
+      @include font-grd;
+      margin-bottom: 24px;
+    }
+    &__btm {
+      @include font-grd;
+    }
+  }
+  &__li {
+    display: flex;
+    justify-content: space-between;
+    &__item {
+      width: 9vw;
+      height: 9vw;
+      min-width: 128px;
+      min-height: 128px;
+      @include sp {
+        min-width: 99px;
+        min-height: 99px;
+      }
+      text-align: center;
+      border: 2px white solid;
+      border-radius: 50%;
+      & span {
+        display: inline-block;
+        margin-top: 45%;
+        @include sp {
+          font-size: 10px;
+        }
+        //////////////////////
+        //  脳  筋  ！！！！  //
+        //////////////////////
+      }
+    }
+  }
+}
+
+
+.hdline--main-btn--shadow {
+  @include main-btn(400px, 80px, 1em, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include sp {
+    @include main-btn(100%, 69px, 1em, 0.5);
+  }
+}
+.hdline--main-btn {
+  @include main-btn(375px, 55px);
+  @include sp {
+    @include main-btn(90%, 47px, 1em, 1);
+  }
+  a {
+    position: relative;
+  }
+  .play-icon {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 2em;
+  }
+}

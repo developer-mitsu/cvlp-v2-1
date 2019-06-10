@@ -1,0 +1,34 @@
+
+///////////////////
+// 05 q a        //
+///////////////////
+
+.q-a {
+  background-color: #fafafa;
+  .common-item-wrap {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap: 40px 8%;
+  }
+}
+
+.common-item {// 詳細度調整用
+  &__title {// 詳細度調整用
+    .question {
+      font-family: "ヒラギノ角ゴシック";
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: $fc-white;
+    }
+    .answer {
+      font-size: 1rem;
+      font-weight: normal;
+    }
+  }
+}
+
+
+
+
+
+
+// common-item系は02-flowにあります

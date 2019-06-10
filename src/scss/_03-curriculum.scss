@@ -1,0 +1,61 @@
+
+
+///////////////////
+// 03 curriculum //
+///////////////////
+
+.curriculum__list {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 90px;
+}
+.curriculum__item__out {
+  width: 28%;
+  border-radius: 5px;
+  background: $grd-totop;
+  padding: 5px;
+  &__in {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 13% 8% 10%
+  }
+}
+
+.curriculum__item__title {
+  text-align: center;
+  font-size: 1.28rem;
+  font-weight: bold;
+  padding: 1.39em 0.4em;//左右は0でいいかも
+}
+
+.curriculum__item__text {
+  margin-bottom: 2em;
+  &:before {
+    @include border-g;
+    width: 84%;
+    margin: 0 auto 2em;
+  }
+}
+
+.curriculum__item__check {
+  li{
+    display: flex;
+    align-items: center;
+    line-height: 1.9em;
+    &:before {
+      display: inline-block;
+      content: "";
+      background-image: url(../img/check.png);
+      background-size: cover;
+      width: 1.4em;
+      height: 1.4em;
+      margin-right: 1em;
+    }
+  }
+}
+
+.curriculum--main-btn {
+  @include main-btn(320px, 50px);
+  margin: 0 auto;
+}
