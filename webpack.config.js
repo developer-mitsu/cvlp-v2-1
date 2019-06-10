@@ -89,9 +89,9 @@ module.exports = {
       template: 'src/main.html'
     }),
     new HtmlWebpackPlugin({
-      chunks: ['sub'],
-      filename: "sub.html",
-      template: 'src/sub.html'
+      chunks: ['contact'],
+      filename: "contact.html",
+      template: 'src/contact.html'
     }),
     new CleanWebpackPlugin(),
   ],
