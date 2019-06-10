@@ -8,7 +8,7 @@ module.exports = {
   mode: MODE,
   entry: {
     main: "./src/js/main.js",
-    sub: "./src/js/sub.js"
+    contact: "./src/js/sub.js"
   },
   output: {
     filename: `${fileName}.js`,
