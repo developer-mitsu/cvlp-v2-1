@@ -4,7 +4,13 @@
 @import "header";//ヘッダー
 @import "footer";//フッター
 
+@import "first-view";
+
 @import '~flatpickr/dist/themes/light.css';
+
+.contact_subtitle {
+  text-align: center;
+}
 
 .state-must { // 必須状態のスタイル
   background-color: #BF0000; 
@@ -35,11 +41,22 @@
   border: 1px solid #B4B4B4;
 }
 
-body {
-  padding-top: 100px;
+.privacy-policy {
+  text-align: center;
 }
 
-form {
+.submit__wrapper {
+  @extend .hdline--main-btn--shadow;
+  display: block;
+  margin: 0 auto;
+  & > input[type="submit"] {
+    @extend .hdline--main-btn;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.grid-wrapper{
   display: grid;
   grid-template-columns: 144px 66px 1fr;
   align-items: center;

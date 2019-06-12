@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Contact</title>
+</head>
+<body>
+  <section class="outer">
+      <div class="inner">
+          <div class="title">
+              <p class="title__num">01</p>
+              <p class="title__cv">Code Village</p>
+              <h2 class="title__text">お問い合わせはこちら</h2>
+          </div>
+          <div class="contact_subtitle">
+              <p>お問い合わせ、無料カウンセリングをご希望の方は下記のお問い合わせフォームからご連絡してください。</p>
+              <p> 三営業日以内にメールもしくはお電話でご返答させて頂きます。</p>
+          </div>
+      </div>
+  </section>
+
+  <form action="" class="inner">
+    <div class="grid-wrapper">
+      <label class="column-title" for="name">お名前</label>
+      <span class="column-state state-must">必須</span>
+      <input class="column-info" type="text" placeholder="田中　太郎" id="name">
+
+      <label class="column-title" for="name-2">お名前(フリガナ)</label>
+      <span class="column-state state-must">必須</span>
+      <input class="column-info" type="text" placeholder="タナカ　タロウ" id="name-2">
+    
+      <label class="column-title" for="email">メールアドレス</label>
+      <span class="column-state state-must">必須</span>
+      <input class="column-info" type="email" placeholder="tanakatarou@sample.com" id="email">
+    
+      <label class="column-title" for="tel">電話番号</label>
+      <span class="column-state state-must">必須</span>
+      <input class="column-info" type="tel" placeholder="xxx-xxxx-xxxx" id="tel">
+    
+      <label class="column-title" for="req">ご用件</label>
+      <span class="column-state state-must">必須</span>
+      <textarea class="column-info" type="text" placeholder="相談したい" id="req"></textarea>
+
+      <label class="column-title">第一希望日</label>
+      <span class="column-state state-must">必須</span>
+      <input class="column-info days" type="text" id="t">
+
+      <label class="column-title">第二希望日</label>
+      <span class="column-state state-free">任意</span>
+      <input class="column-info days" type="text">
+
+      <label class="column-title">第三希望日</label>
+      <span class="column-state state-free">任意</span>
+      <input class="column-info days" type="text">
+    </div>
+
+    <div class="outer">
+      <div class="inner">
+        <div class="privacy-policy">
+          <input type="checkbox" name="" id="privacy">
+          <label for="privacy">プライバシーボリシーに同意しました</label>
+        </div>
+        <div class="submit__wrapper">
+          <input type="submit" value="送信">
+        </div>
+      </div>
+    </div>
+  </form>
+<script type="text/javascript" src="contact.js"></script></body>
+</html>
