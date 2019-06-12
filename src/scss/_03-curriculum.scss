@@ -20,6 +20,9 @@
   padding: 5px;
   @include tab {
     width: 100%;
+    & + * {
+      margin-top: 54px;
+    }
   }
   &__in {
     background-color: #fff;
@@ -64,4 +67,8 @@
 .curriculum--main-btn {
   @include main-btn(320px, 50px);
   margin: 0 auto;
+  @include tab {
+    width: 90%;
+    max-width: 320px;
+  }
 }
