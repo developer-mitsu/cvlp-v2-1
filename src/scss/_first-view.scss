@@ -4,8 +4,11 @@
 
 .first-view {
   display: grid; 
-  grid-auto-rows: minmax(1fr, auto);
   grid-template-columns: 4fr 3fr;
+  @include tab {
+    grid-template-columns: unset;
+    grid-template-rows: 4fr 3fr; 
+  }
   margin-top: 60px;//=headerのheight 
   @include sp {
     margin-top: 44px;
@@ -26,8 +29,15 @@
   background-color: rgba(0, 0, 0, 0.82);
   color: $fc-white;
   padding: 90px 40px;
+  @include tab {
+    padding-top: 38px;
+    padding-bottom: 38px;
+  }
   &__copy {
     font-size: 2.5vw;
+    @include tab {
+      font-size: 30px;
+    }
     @include sp {
       font-size: 24px;
     }
