@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Contact</title>
+</head>
+<body>
+    <!-- column-title
+    column-state state-must
+    column-info -->
+  <form action="" class="inner">
+      <label class="column-title" for="name">お名前</label>
+      <span class="column-state state-must">必須</span>
+      <input class="column-info" type="text" placeholder="田中　太郎" id="name">
+
+      <label class="column-title" for="name-2">お名前(フリガナ)</label>
+      <span class="column-state state-must">必須</span>
+      <input class="column-info" type="text" placeholder="タナカ　タロウ" id="name-2">
+    
+      <label class="column-title" for="email">メールアドレス</label>
+      <span class="column-state state-must">必須</span>
+      <input class="column-info" type="email" placeholder="tanakatarou@sample.com" id="email">
+    
+      <label class="column-title" for="tel">電話番号</label>
+      <span class="column-state state-must">必須</span>
+      <input class="column-info" type="tel" placeholder="xxx-xxxx-xxxx" id="tel">
+    
+      <label class="column-title" for="req">ご用件</label>
+      <span class="column-state state-must">必須</span>
+      <textarea class="column-info" type="text" placeholder="相談したい" id="req"></textarea>
+
+      <label class="column-title">第一希望日</label>
+      <span class="column-state state-must">必須</span>
+      <input class="column-info days" type="text" id="t">
+
+      <label class="column-title">第二希望日</label>
+      <span class="column-state state-free">任意</span>
+      <input class="column-info days" type="text">
+
+      <label class="column-title">第三希望日</label>
+      <span class="column-state state-free">任意</span>
+      <input class="column-info days" type="text">
+  </form>
+<script type="text/javascript" src="contact.js"></script></body>
+</html>

@@ -28,6 +28,9 @@
 
 .column-info {
   height: 49px;
+  padding-top: 0.5em;
+  padding-left: 0.5em;
+  border: 1px solid #B4B4B4;
 }
 
 body {
@@ -37,11 +40,18 @@ body {
 form {
   display: grid;
   grid-template-columns: 144px 66px 1fr;
+  align-items: center;
   row-gap: 28px;
-column-gap: 18px;
-  .column-title, .column-state {
-    display: inline-block;
-    vertical-align: middle;
-    margin: auto 0;
+  column-gap: 18px;
+  @include sp {
+    column-gap: 0;
+    row-gap: 0;
+  }
+  .column-info {
+    @include sp {
+      grid-column: 1 / 4;
+      margin-top: 0.5em;
+      margin-bottom: 2em;
+    }
   }
 }
