@@ -4,6 +4,8 @@
 @import "header";//ヘッダー
 @import "footer";//フッター
 
+@import '~flatpickr/dist/themes/light.css';
+
 .state-must { // 必須状態のスタイル
   background-color: #BF0000; 
 }

@@ -1,8 +1,8 @@
-// import flatpickr from "flatpickr";
-// // import 'flatpickr/dist/flatpickr.css'; // formで使用するカレンダーアドオン
-// import "../scss/contact.scss"
+import flatpickr from "flatpickr"; // formで使用するカレンダーアドオン
+import "../scss/contact.scss"
 
-// flatpickr('#t', {
-//   enableTime: true,
-//   dateFormat: "Y-m-d H:i",
-// });
+flatpickr('.days', {
+  enableTime: true,
+  minDate: "today", // 今日以前を選択不可
+  dateFormat: "Y-m-d H:i",
+});
