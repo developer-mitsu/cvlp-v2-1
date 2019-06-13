@@ -21,39 +21,39 @@
       </div>
   </section>
 
-  <form action="" class="inner">
+  <form action="./contact.php" class="inner" method="POST">
     <div class="grid-wrapper">
       <label class="column-title" for="name">お名前</label>
       <span class="column-state state-must">必須</span>
-      <input class="column-info" type="text" placeholder="田中　太郎" id="name">
+      <input class="column-info" type="text" placeholder="田中　太郎" name="name">
 
       <label class="column-title" for="name-2">お名前(フリガナ)</label>
       <span class="column-state state-must">必須</span>
-      <input class="column-info" type="text" placeholder="タナカ　タロウ" id="name-2">
+      <input class="column-info" type="text" placeholder="タナカ　タロウ" name="name_how">
     
       <label class="column-title" for="email">メールアドレス</label>
       <span class="column-state state-must">必須</span>
-      <input class="column-info" type="email" placeholder="tanakatarou@sample.com" id="email">
+      <input class="column-info" type="email" placeholder="tanakatarou@sample.com" name="email">
     
       <label class="column-title" for="tel">電話番号</label>
       <span class="column-state state-must">必須</span>
-      <input class="column-info" type="tel" placeholder="xxx-xxxx-xxxx" id="tel">
+      <input class="column-info" type="tel" placeholder="xxx-xxxx-xxxx" name="phone">
     
       <label class="column-title" for="req">ご用件</label>
       <span class="column-state state-must">必須</span>
-      <textarea class="column-info" type="text" placeholder="相談したい" id="req"></textarea>
+      <textarea class="column-info" type="text" placeholder="相談したい" name="content"></textarea>
 
       <label class="column-title">第一希望日</label>
       <span class="column-state state-must">必須</span>
-      <input class="column-info days" type="text" id="t">
+      <input class="column-info days" type="text" name="date1">
 
       <label class="column-title">第二希望日</label>
       <span class="column-state state-free">任意</span>
-      <input class="column-info days" type="text">
+      <input class="column-info days" type="text" name="date2">
 
       <label class="column-title">第三希望日</label>
       <span class="column-state state-free">任意</span>
-      <input class="column-info days" type="text">
+      <input class="column-info days" type="text" name="date3">
     </div>
 
     <div class="outer">
