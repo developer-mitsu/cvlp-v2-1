@@ -46,10 +46,19 @@ footer {
   margin-bottom: 5em;
   li {
     display: inline-block;
+    @include sp {
+      display: block;
+    }
+    & + * {
+      margin-top: 1.2em;
+    }
     & + *:before {
       display: inline-block;
       content: "/";
       margin: 0 1rem;
+      @include sp {
+        display: none;
+      }
     }
     a {
       display: inline;
