@@ -10,23 +10,38 @@
     width: 100%;
     height: 100%;
     background: linear-gradient(to left, rgba(#FF006B, 1), rgba(#FFCA16, 1));
-    padding: 50px 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 }
 
 .pre-cha-flex {
   display: flex;
   justify-content: space-between;
+  @include tab {
+    flex-direction: column;
+  }
 }
 
 .pre-movie {
   width: 46%;
-  background-color: #000;
+    iframe {
+    width: 100%;
+    height: 100%;
+  }
+  @include tab {
+    width: 100%;
+    height : 263px;
+    margin-bottom: 53px;
+  }
 }
 
 .pre-cha__text {
   width: 50%;
   color: $fc-white;
+  @include tab {
+    width: 100%;
+  }
 }
 
 .pre-cha__text__hd {

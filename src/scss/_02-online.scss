@@ -25,6 +25,10 @@
 .online__img {
   width: 40%;
   @include tab {
+    width: 60%;
+    margin: 0 auto;
+  }
+  @include sp {
     width: 100%;
   }
   img {
