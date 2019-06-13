@@ -3,19 +3,19 @@
 ///////////////////////
 
 .first-view {
-  display: grid; 
-  grid-template-columns: 4fr 3fr;
-  @include tab {
-    grid-template-columns: unset;
-    grid-template-rows: 4fr 3fr; 
-  }
+  display: flex;
+  align-items: bottom;
   margin-top: 60px;//=headerのheight 
-  @include sp {
-    margin-top: 44px;
-  }
   height: 675px;
   background-image: url(../img/top.jpeg);
   background-size: cover;
+  @include sp {
+    margin-top: 44px;
+    height: 622px;
+  }
+  @include tab {
+    background-position: 10% 50%;
+  }
 }
 
 // .eyecatch {
@@ -27,19 +27,31 @@
   flex-direction: column;
   justify-content: space-between;
   background-color: rgba(0, 0, 0, 0.82);
+  width: 45vw;
+  min-width: 128px * 3 + 38px * 2;
+  height: 100%;
   color: $fc-white;
   padding: 90px 40px;
+  margin-left: auto;
   @include tab {
+    width: 100%;
     padding-top: 38px;
     padding-bottom: 38px;
+    height: unset;
+    margin-top: auto;
+  }
+  @include sp {
+    min-width: unset;
   }
   &__copy {
     font-size: 2.5vw;
+    margin-bottom: 24px;
+
     @include tab {
       font-size: 30px;
     }
     @include sp {
-      font-size: 24px;
+      font-size: 22px;
     }
     font-weight: bold;
     color: #FFC119;//非対応ブラウザ用
@@ -47,6 +59,9 @@
     &__top {
       @include font-grd;
       margin-bottom: 24px;
+      @include sp {
+        margin-bottom: 0;
+      }
     }
     &__btm {
       @include font-grd;
@@ -55,14 +70,19 @@
   &__li {
     display: flex;
     justify-content: space-between;
+    min-width: 128px * 3;
+    margin-bottom: 24px;
+    @include sp {
+      min-width: unset;
+    }
     &__item {
       width: 9vw;
       height: 9vw;
       min-width: 128px;
       min-height: 128px;
       @include sp {
-        min-width: 99px;
-        min-height: 99px;
+        min-width: 90px;
+        min-height: 90px;
       }
       text-align: center;
       border: 2px white solid;
