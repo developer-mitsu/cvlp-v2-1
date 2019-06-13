@@ -49,7 +49,7 @@
   @extend .hdline--main-btn--shadow;
   display: block;
   margin: 0 auto;
-  & > input[type="submit"] {
+  & > .submit-btn {
     @extend .hdline--main-btn;
     border: none;
     cursor: pointer;

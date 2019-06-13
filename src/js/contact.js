@@ -6,3 +6,4 @@ flatpickr('.days', {
   minDate: "today", // 今日以前を選択不可
   dateFormat: "Y-m-d H:i",
 });
+

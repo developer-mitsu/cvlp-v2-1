@@ -1,5 +1,9 @@
 <?php
 mb_internal_encoding("UTF-8");
+
+$admin_email = "info@permil.jp";
+$admin_sub_email = "nishiumi@permil.jp";
+
 // []内はcontact.html内のname
 if($_SERVER["REQUEST_METHOD"] == "POST") {
   $name = $_POST['name'];
@@ -28,12 +32,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $Head.="Mime-Version: 1.0\n";
     $Head.="Reply-To: ".$from."\n";
     $Head.="X-Mailer: PHP/". phpversion();
-    $flg = mb_send_mail($to, $sub, $body,$Head,"nishiumi@permil.jp");
+    $flg = mb_send_mail($to, $sub, $body,$Head, $admin_sub_email);
     return $flg;
   }
 
 	//メールの送り先,メールの送り元,メールタイトル
-	$flg = SENDMAIL("info@permil.jp", $address, "カウンセリング希望", $body);
+	$flg = SENDMAIL($admin_email, $address, "カウンセリング希望", $body);
 
 	if($flg == true) {
 		$message = "無料カウンセリングのお申込みが完了しました。\n弊社より折り返しご連絡致します。\n今しばらくお待ち下さい。";
