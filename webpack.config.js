@@ -8,7 +8,7 @@ module.exports = {
   mode: MODE,
   entry: {
     main: "./src/js/main.js",
-    contact: "./src/js/sub.js"
+    contact: "./src/js/sub.js",
   },
   output: {
     filename: `${fileName}.js`,
@@ -62,6 +62,15 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.php$/,
+        use: [{
+            loader: 'file-loader',
+            options: {
+                name: '[name].[ext]',
+            }
+        }]
       },
       {
         test: /\.js$/,
