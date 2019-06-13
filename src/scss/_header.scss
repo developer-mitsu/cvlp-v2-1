@@ -80,8 +80,6 @@ header::after {
 // ハンバーガー(sp,tab用) ///
 ///////////////////////////
 @include tab {
-
-
   .hd-nav {
     display: none;
     &--sp {
@@ -89,7 +87,27 @@ header::after {
     }
   }
   .hum-bar {
-    // display: block;
-      grid-area: hum;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-area: hum;
+    text-align: center;
+    height: 44px - 11px * 2;
+      // headerのheight - 上下padding
+    margin-left: 10px;
+    span {
+      display: inline-block;
+      background-color: white;
+      width: 28px;
+      height: 1px;
+      &:nth-child(1){
+      }
+      &:nth-child(2){
+        width: 40px;
+      }
+      &:nth-child(3){
+
+      }
+    }
   }
 }
