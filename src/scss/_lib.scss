@@ -22,8 +22,13 @@ $grd-tobottom : linear-gradient(to bottom, #FFC119,#FF016A);
 $grd-totop : linear-gradient(to top, #FFC119,#FF016A);
 $fc-white: #fff;
 $p-mg-b: 1.7em;
+
 $voice-img-w: 24.5vw;
 $voice-item-padtop: $voice-img-w/2;
+$voice-img-w--tab: $voice-img-w * 1.5;
+$voice-item-padtop--tab: $voice-img-w--tab/2;
+$voice-img-w--sp: 100%;
+$voice-item-padtop--sp: $voice-img-w--sp/2;
 
 @mixin centering-lh($height){
   height: $height;
