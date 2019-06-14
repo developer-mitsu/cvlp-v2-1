@@ -9,12 +9,21 @@
   justify-content: space-between;
   width: 100%;
   margin-bottom: 90px;
+  @include tab {
+    flex-direction: column;
+  }
 }
 .curriculum__item__out {
   width: 28%;
   border-radius: 5px;
   background: $grd-totop;
   padding: 5px;
+  @include tab {
+    width: 100%;
+    & + * {
+      margin-top: 54px;
+    }
+  }
   &__in {
     background-color: #fff;
     border-radius: 5px;
@@ -58,4 +67,8 @@
 .curriculum--main-btn {
   @include main-btn(320px, 50px);
   margin: 0 auto;
+  @include tab {
+    width: 90%;
+    max-width: 320px;
+  }
 }

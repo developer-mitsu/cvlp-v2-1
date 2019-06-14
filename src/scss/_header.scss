@@ -68,28 +68,95 @@ header::after {
   }
 }
 
-.hum-bar {
+#hum-bar {
   display: none;
 }
 
-.hd-nav--sp {
-  display: none;
+#hd-nav--sp {
+  // display: none;
 }
-
 ///////////////////////////
 // ハンバーガー(sp,tab用) ///
 ///////////////////////////
 @include tab {
-
-
-  .hd-nav {
+  #hd-nav {
     display: none;
-    &--sp {
-      // display: block;
+  }
+
+  #hd-nav--sp.menu-active {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    transform: translateY(0);
+  }
+
+  #hd-nav--sp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10% 0;
+    background-color:  #222;
+    width: 100%;
+    height: 100vh;
+    font-size: 1.5rem;
+    transform: translateY(100%);
+    transition: all 1s ease-in-out;
+  }
+  .hd-nav__item--sp {
+    text-align: center;
+    & + * {
+      margin-top: 2em;
     }
   }
-  .hum-bar {
-    // display: block;
-      grid-area: hum;
+  .hd-icon--sp {
+    text-align: center;
+    & > * + * {
+      margin-left: 1rem;
+    }
+  }
+
+
+  #hum-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-area: hum;
+    text-align: center;
+    height: 44px - 11px * 2;
+      // headerのheight - 上下padding
+    margin-left: 10px;
+    cursor: pointer;
+    .bar {
+      display: inline-block;
+      background-color: white;
+      width: 28px;
+      height: 1px;
+    }
+    #bar2{
+      width: 40px;
+    }
+    #bar1, #bar2, #bar3 {
+      transition: all 0.5s ease-in-out;
+    }
+    #bar1.hum-clicked{
+      transform:
+        rotateZ(-315deg)
+        translateX(8px)
+        translateY(-9px);
+      transform-origin: top left;
+      width: 32px;
+    }
+    #bar2.hum-clicked{
+      transform:
+        rotateZ(315deg)
+        translateX(5px)
+        translateY(4px);
+      width: 32px;
+    }
+    #bar3.hum-clicked{
+      transform: rotateZ(-675deg);
+      transform-origin: bottom right;
+      opacity: 0;
+    }
   }
 }

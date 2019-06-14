@@ -17,10 +17,20 @@
 .online-flex {
   display: flex;
   justify-content: space-between;
+  @include tab {
+    flex-direction: column;
+  }
 }
 
 .online__img {
   width: 40%;
+  @include tab {
+    width: 60%;
+    margin: 0 auto;
+  }
+  @include sp {
+    width: 100%;
+  }
   img {
     width: 100%;
     height: auto;
@@ -29,6 +39,9 @@
 
 .online__text {
   width: 50%;
+  @include tab {
+    width: 100%;
+  }
 }
 
 .online__text__hd {
@@ -55,6 +68,9 @@
   text-align: center;
   border-radius: 5px;
   margin-left: auto;
+  @include tab {
+    margin: 0 auto;
+  }
   a {
     display: block;
   }
