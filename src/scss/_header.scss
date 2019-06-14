@@ -73,9 +73,8 @@ header::after {
 }
 
 #hd-nav--sp {
-  display: none;
+  // display: none;
 }
-
 ///////////////////////////
 // ハンバーガー(sp,tab用) ///
 ///////////////////////////
@@ -85,12 +84,37 @@ header::after {
   }
 
   #hd-nav--sp.menu-active {
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    transform: translateY(0);
   }
 
   #hd-nav--sp {
-    
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10% 0;
+    background-color:  #222;
+    width: 100%;
+    height: 100vh;
+    font-size: 1.5rem;
+    transform: translateY(100%);
+    transition: all 1s ease-in-out;
   }
+  .hd-nav__item--sp {
+    text-align: center;
+    & + * {
+      margin-top: 2em;
+    }
+  }
+  .hd-icon--sp {
+    text-align: center;
+    & > * + * {
+      margin-left: 1rem;
+    }
+  }
+
 
   #hum-bar {
     display: flex;
@@ -101,6 +125,7 @@ header::after {
     height: 44px - 11px * 2;
       // headerのheight - 上下padding
     margin-left: 10px;
+    cursor: pointer;
     .bar {
       display: inline-block;
       background-color: white;
