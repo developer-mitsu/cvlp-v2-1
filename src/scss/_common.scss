@@ -33,7 +33,7 @@ p {
   }
 }
 
-.outer, .ft-top, .ft-inc, .online-flex, .hdline, .pre-cha--filter {
+.outer, .ft-top, .ft-inc, .online-flex, .hdline, .pre-cha--filter, .point {
   @include sp {
     padding-right: 15px;
     padding-left: 15px;
