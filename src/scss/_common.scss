@@ -41,6 +41,7 @@ p {
 }
 .inner {
   width: 74vw;
+  max-width: 1440px;
   margin: 0 auto;
   @include sp {
     width: 100%;
