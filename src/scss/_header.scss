@@ -71,9 +71,10 @@ header::after {
 #hum-bar {
   display: none;
 }
-
-#hd-nav--sp {
-  // display: none;
+@include pc {
+  #hd-nav--sp {
+    display: none;
+  }
 }
 ///////////////////////////
 // ハンバーガー(sp,tab用) ///
