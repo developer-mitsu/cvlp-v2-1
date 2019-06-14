@@ -53,6 +53,8 @@
   }
   @include sp {
     min-width: unset;
+    padding-right: 15px;
+    padding-left: 15px;
   }
   &__copy {
     font-size: 2.5vw;
