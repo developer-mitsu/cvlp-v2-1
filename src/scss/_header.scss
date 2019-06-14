@@ -68,11 +68,11 @@ header::after {
   }
 }
 
-.hum-bar {
+#hum-bar {
   display: none;
 }
 
-.hd-nav--sp {
+#hd-nav--sp {
   display: none;
 }
 
@@ -80,13 +80,19 @@ header::after {
 // ハンバーガー(sp,tab用) ///
 ///////////////////////////
 @include tab {
-  .hd-nav {
+  #hd-nav {
     display: none;
-    &--sp {
-      // display: block;
-    }
   }
-  .hum-bar {
+
+  #hd-nav--sp.menu-active {
+    display: block;
+  }
+
+  #hd-nav--sp {
+    
+  }
+
+  #hum-bar {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -95,19 +101,37 @@ header::after {
     height: 44px - 11px * 2;
       // headerのheight - 上下padding
     margin-left: 10px;
-    span {
+    .bar {
       display: inline-block;
       background-color: white;
       width: 28px;
       height: 1px;
-      &:nth-child(1){
-      }
-      &:nth-child(2){
-        width: 40px;
-      }
-      &:nth-child(3){
-
-      }
+    }
+    #bar2{
+      width: 40px;
+    }
+    #bar1, #bar2, #bar3 {
+      transition: all 0.5s ease-in-out;
+    }
+    #bar1.hum-clicked{
+      transform:
+        rotateZ(-315deg)
+        translateX(8px)
+        translateY(-9px);
+      transform-origin: top left;
+      width: 32px;
+    }
+    #bar2.hum-clicked{
+      transform:
+        rotateZ(315deg)
+        translateX(5px)
+        translateY(4px);
+      width: 32px;
+    }
+    #bar3.hum-clicked{
+      transform: rotateZ(-675deg);
+      transform-origin: bottom right;
+      opacity: 0;
     }
   }
 }
