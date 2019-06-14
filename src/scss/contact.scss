@@ -1,8 +1,76 @@
 @import "reset";//リセット
 @import "lib";//変数とか
 @import "common";//共通系
-@import "haeder";//ヘッダー
+@import "header";//ヘッダー
 @import "footer";//フッター
 
+@import "first-view";
 
+@import '~flatpickr/dist/themes/light.css';
 
+.contact_subtitle {
+  text-align: center;
+}
+
+.state-must { // 必須状態のスタイル
+  background-color: #BF0000; 
+}
+
+.state-free { // 任意状態のスタイル
+  background-color: #C6C6C6;
+}
+
+.column-title {
+  font-size: 18px;
+  text-align: left;
+}
+
+.column-state {
+  $height: 28px;
+  height: $height;
+  line-height: $height;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+}
+
+.column-info {
+  height: 49px;
+  padding-top: 0.5em;
+  padding-left: 0.5em;
+  border: 1px solid #B4B4B4;
+}
+
+.privacy-policy {
+  text-align: center;
+}
+
+.submit__wrapper {
+  @extend .hdline--main-btn--shadow;
+  display: block;
+  margin: 0 auto;
+  & > .submit-btn {
+    @extend .hdline--main-btn;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.grid-wrapper{
+  display: grid;
+  grid-template-columns: 144px 66px 1fr;
+  align-items: center;
+  row-gap: 28px;
+  column-gap: 18px;
+  @include sp {
+    column-gap: 0;
+    row-gap: 0;
+  }
+  .column-info {
+    @include sp {
+      grid-column: 1 / 4;
+      margin-top: 0.5em;
+      margin-bottom: 2em;
+    }
+  }
+}
