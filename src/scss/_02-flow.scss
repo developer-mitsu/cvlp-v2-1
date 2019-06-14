@@ -35,9 +35,6 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    & > * + * {//h3タグのサイズ
-      font-size: 1.2rem;
-    }
     @include tab {
       flex-direction: column;
     }
@@ -54,6 +51,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    & > * + * {//h3タグのサイズ
+      font-size: 1.2rem;
+    }
   }
   &__title-out.alfa {
     width: 45%;
