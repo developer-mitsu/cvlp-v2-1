@@ -44,6 +44,8 @@
 
 .privacy-policy {
   text-align: center;
+  // marginつけていいんですかねここは by d.m.
+  margin-bottom: 1em;
 }
 
 .submit__wrapper {
@@ -74,4 +76,10 @@
       margin-bottom: 2em;
     }
   }
+}
+
+// developer-mitsu
+
+input, textarea {
+  border-radius: 5px;
 }
