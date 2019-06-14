@@ -27,7 +27,7 @@ $voice-img-w: 24.5vw;
 $voice-item-padtop: $voice-img-w/2;
 $voice-img-w--tab: $voice-img-w * 1.5;
 $voice-item-padtop--tab: $voice-img-w--tab/2;
-$voice-img-w--sp: 100%;
+$voice-img-w--sp: 300px;
 $voice-item-padtop--sp: $voice-img-w--sp/2;
 
 @mixin centering-lh($height){
