@@ -9,6 +9,7 @@ module.exports = {
   entry: {
     main: "./src/js/main.js",
     contact: "./src/js/sub.js",
+    curriculum: "./src/js/curriculum.js",
   },
   output: {
     filename: `${fileName}.js`,
@@ -101,6 +102,11 @@ module.exports = {
       chunks: ['contact'],
       filename: "contact.html",
       template: 'src/contact.html'
+    }),
+    new HtmlWebpackPlugin({
+      chunks: ['curriculum'],
+      filename: "curriculum.html",
+      template: 'src/curriculum.html'
     }),
     new CleanWebpackPlugin(),
   ],
