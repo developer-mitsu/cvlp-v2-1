@@ -1,5 +1,3 @@
-import '../scss/main.scss';
-import './slider.js';
-import './hum.js';
-
-
+import "../scss/main.scss";
+import "./slider.js";
+import "./hum.js";
