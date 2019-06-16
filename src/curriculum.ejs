@@ -13,7 +13,7 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="wrapper"></div>
+    <% include ./src/components/header %>
     <section class="curri">
       <div class="title">
         <p class="title__num">03</p>
@@ -296,6 +296,7 @@
         </form>
       </div>
     </section>
+    <% include ./src/components/footer %>
     <script>
       function toContact() {
         var requiredObjects = [
