@@ -1,4 +1,5 @@
 const MODE = "development";
+const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const fileName = MODE == "production" ? "[name]-[hash]" : "[name]";
@@ -19,6 +20,18 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.css/,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              url: false
+            }
+          }
+        ]
+      },
       {
         test: /\.scss$/,
         use: [
@@ -100,6 +113,10 @@ module.exports = {
     ]
   },
   plugins: [
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
+    }),
     new HtmlWebpackPlugin({
       chunks: ["main"],
       filename: "main.html",
