@@ -15,17 +15,16 @@
 }
 
 .voice__slide {
-  margin-top: $voice-img-w * 0.9;
-  // margin-top: $voice-img-w * 0.6 + 90px);
+  margin-top: $voice-img-w * 0.7;
   position: relative;
   display: flex;
   justify-content: center;
   width: 100%;
   @include tab {
-    margin-top: $voice-img-w--tab;
+    margin-top: $voice-img-w--tab * 0.7;
   }
   @include sp {
-    margin-top: $voice-img-w--sp * 0.7;
+    margin-top: $voice-img-w--sp * 0.6;
   }
   & > * + * {
     margin-left: 20px;
@@ -38,7 +37,7 @@
   flex-shrink: 0;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
   padding: $voice-item-padtop 4vw 2.5vw;
-  opacity: 0.5;
+  opacity: 1;
   @include tab {
     width: 90%;
     padding-top: $voice-item-padtop--tab;
@@ -100,15 +99,32 @@
   transition: all 600ms;
   transition-timing-function: cubic-bezier(0.76, 2.21, 0.65, 0.49);
   &:hover {
-    transform: scale(0.85);
-  }
-  &.is-center {
     transform: scale(0.9);
-    opacity: 1;
-    &:hover {
-      transform: scale(1.0);
-    }
   }
 }
 
+///////////////////////////////
+//＊＊＊以下slick.cssの変更＊＊＊//
+///////////////////////////////
+// slickのcssがnode_modulesに入ってるけど
+// ignoreしてるのでimportantで対処してます
 
+.slick-list {
+  overflow: initial!important;
+}
+
+.slider-prev, .slider-next {
+  display: block;
+  position: absolute;
+  color: tomato;
+  font-size: 4rem;
+}
+
+.slider-prev {
+  top: 40%;
+  left: 0;
+}
+.slider-next {
+  top: 40%;
+  right: 0;
+}
