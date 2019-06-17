@@ -37,11 +37,13 @@
   width: 42%;
   flex-shrink: 0;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
-  padding: $voice-item-padtop 4vw 2.5vw;
+  padding: $voice-item-padtop 2.5vw 2.5vw;
   opacity: 1;
   @include tab {
     width: 90%;
     padding-top: $voice-item-padtop--tab;
+    padding-left: 4vw;
+    padding-right: 4vw;
   }
   @include sp {
     padding-top: $voice-item-padtop--sp;
