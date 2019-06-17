@@ -25,9 +25,16 @@
     }
   }
   &__in {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: #fff;
     border-radius: 5px;
-    padding: 13% 8% 10%
+    height: 100%;
+    padding: 13% 8% 10%;
+    @include tab {
+      padding: 6% 4% 5%;
+    }
   }
 }
 
@@ -48,10 +55,20 @@
 }
 
 .curriculum__item__check {
+  @include tab {
+    display: flex;
+    justify-content: center;
+  }
+  @include sp {
+    display: block;
+  }
   li{
     display: flex;
     align-items: center;
     line-height: 1.9em;
+    @include tab {
+      margin-right: 1rem;
+    }
     &:before {
       display: inline-block;
       content: "";
@@ -60,6 +77,9 @@
       width: 1.4em;
       height: 1.4em;
       margin-right: 1em;
+      @include tab {
+        margin-right: 2px;
+      }
     }
   }
 }
