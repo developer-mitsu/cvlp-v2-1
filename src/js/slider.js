@@ -4,11 +4,15 @@ import "slick-carousel/slick/slick.css";
 import slick from "slick-carousel";
 
 $(".slide-container").slick({
+  dots: false,
   centerMode: true,
   arrow: true,
   infinite: true,
   centerPadding: "0px",
-  slidesToShow: 2,
+  slidesToShow: 3,
+  // appendArrows: $('.slide-container'),
+  prevArrow: '<div class="slider-arrow slider-prev fas fa-chevron-left"></div>',
+  nextArrow: '<div class="slider-arrow slider-next fas fa-chevron-right"></div>',
   responsive: [
     {
       breakpoint: 980,
@@ -16,7 +20,7 @@ $(".slide-container").slick({
         arrows: true,
         centerMode: true,
         centerPadding: "0px",
-        slidesToShow: 3
+        slidesToShow: 1
       }
     },
     {
