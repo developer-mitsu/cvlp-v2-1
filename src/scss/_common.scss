@@ -33,7 +33,7 @@ p {
   }
 }
 
-.outer, .ft-top, .ft-inc, .online-flex, .hdline, .pre-cha--filter {
+.outer, .ft-top, .ft-inc, .online-flex, .hdline, .pre-cha--filter, .point {
   @include sp {
     padding-right: 15px;
     padding-left: 15px;
@@ -41,6 +41,7 @@ p {
 }
 .inner {
   width: 74vw;
+  max-width: 1440px;
   margin: 0 auto;
   @include sp {
     width: 100%;
@@ -82,7 +83,7 @@ p {
   }
   &__text {
     grid-area: text;
-    font-size: 1.4rem;
+    font-size: 1rem;
     font-weight: normal;
     margin-top: 3px;
     @include sp {

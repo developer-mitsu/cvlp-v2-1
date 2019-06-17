@@ -5,22 +5,31 @@
 .point {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   @include tab {
     flex-direction: column;
   }
 }
 .point__item {
   width: 30%;
-  padding: 3% 4%;
   @include tab {
     width: 100%;
+    text-align: center;
+    & + * {
+      margin-top: 54px;
+    }
   }
 }
 .point__icon {
   width: 60%;
   margin: 0 auto 32px;
   text-align: center;
+  @include tab {
+    width: 20%;
+  }
+  @include sp {
+    width: 40%;
+  }
   & > img {
     width: 100%;
     max-width: 250px;

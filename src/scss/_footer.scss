@@ -77,6 +77,9 @@ footer {
 
 .ft-inc {
   margin-bottom: 60px;//ft-fixedのheightと同値
+  @include sp {
+    margin-bottom: 0;
+  }
   border-top: 1px solid white;
   padding: 1.8em;
   & small {
@@ -86,13 +89,12 @@ footer {
   }
 }
 .ft-fixed {
-  $height: 60px;
   position: fixed;
   bottom: 0;
   right: 0;
   background-color: #000;
   width: 100%;
-  height: $height;
+  padding: 10px 0;
   @include sp {
     display: none;
   }
@@ -100,15 +102,19 @@ footer {
     display: flex;
     width: 56%;
     margin: 0 auto;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     & > p {
       font-weight: bold;
-      @include centering-lh($height);
+      margin: 0 3vw;
     }
   }
 }
 
 .ft-main-btn {
-  @include main-btn(226px, 36px);
+  @include main-btn(15vw, 36px);
+  max-width: 226px;
+  min-width: 150px;
+  margin: 0 3vw;
 }
