@@ -47,7 +47,8 @@ module.exports = {
             options: {
               plugins: [
                 require("autoprefixer")({
-                  grid: true
+                  grid: true,
+                  browsers: ["last 2 versions", "ie >= 11", "Android >= 4"]
                 })
               ]
             }
@@ -82,7 +83,7 @@ module.exports = {
             loader: "url-loader",
             options: {
               limit: 51200,
-              name: `./img/${fileName}.[ext]`,
+              name: `${fileName}.[ext]`,
               outputPath: 'img/',
               publicPath: './img'
             }

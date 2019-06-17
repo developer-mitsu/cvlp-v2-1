@@ -40,6 +40,9 @@ header::after {
 .hd-logo {
   grid-area: logo;
   @include logo;
+  a {
+    display: inline;
+  }
 }
 
 .hd-nav {
