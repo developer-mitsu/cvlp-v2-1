@@ -3,7 +3,10 @@ import "../scss/main.scss";
 import "./hum.js";
 
 $(function () {
-    $("#name1").on('click', function () {
-        location.href = $(this).attr('data-url');
+    let students = ["#name1", "#name2", "#name3", "#name4"];
+    students.forEach(function (value) {
+        $(value).on('click', function () {
+            location.href = $(this).attr('data-url');
+        })
     })
 })
