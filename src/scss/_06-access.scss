@@ -41,6 +41,18 @@
 
 .school {
   font-size: 1.5rem;
+  @include tab {
+    line-height: 1.5em;
+  }
+  &__br {
+    display: none;
+    @include tab {
+      display: inline;
+    }
+    @include sp {
+      display: none;
+    }
+  }
   @include sp {
     margin-top: 1em;
   }
