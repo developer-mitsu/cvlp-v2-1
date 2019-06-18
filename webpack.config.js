@@ -10,7 +10,11 @@ module.exports = {
     main: "./src/js/main.js",
     contact: "./src/js/sub.js",
     curriculum: "./src/js/curriculum.js",
-    download: "./src/js/download.js"
+    download: "./src/js/download.js",
+    student1: "./src/js/student1.js",
+    student2: "./src/js/student2.js",
+    student3: "./src/js/student3.js",
+    student4: "./src/js/student4.js",
   },
   output: {
     filename: `${fileName}.js`,
@@ -140,6 +144,26 @@ module.exports = {
       chunks: ["download"],
       filename: "download.html",
       template: "src/download.ejs"
+    }),
+    new HtmlWebpackPlugin({
+      chunks: ["student1"],
+      filename: "student1.html",
+      template: "src/student1.ejs"
+    }),
+    new HtmlWebpackPlugin({
+      chunks: ["student2"],
+      filename: "student2.html",
+      template: "src/student2.ejs"
+    }),
+    new HtmlWebpackPlugin({
+      chunks: ["student3"],
+      filename: "student3.html",
+      template: "src/student3.ejs"
+    }),
+    new HtmlWebpackPlugin({
+      chunks: ["student4"],
+      filename: "student4.html",
+      template: "src/student4.ejs"
     }),
     new CleanWebpackPlugin()
   ]
