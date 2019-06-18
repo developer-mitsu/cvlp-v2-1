@@ -40,7 +40,7 @@
   padding: $voice-item-padtop 2.5vw 2.5vw;
   opacity: 1;
   @include tab {
-    width: 90%;
+    width: 100%;
     padding-top: $voice-item-padtop--tab;
     padding-left: 4vw;
     padding-right: 4vw;
@@ -91,9 +91,11 @@
   }
   @include tab {
     width: $voice-img-w--tab;
+    height: $voice-img-w--tab;
   }
   @include sp {
     width: $voice-img-w--sp;
+    height: $voice-img-w--sp;    
   }
 }
 

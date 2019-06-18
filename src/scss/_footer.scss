@@ -76,7 +76,7 @@ footer {
 
 
 .ft-inc {
-  margin-bottom: 60px;//ft-fixedのheightと同値
+  margin-bottom: 55px;//ft-fixedのheightと同値
   @include sp {
     margin-bottom: 0;
   }
@@ -100,14 +100,12 @@ footer {
   }
   &__wrap {
     display: flex;
-    width: 56%;
-    margin: 0 auto;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     & > p {
       font-weight: bold;
-      margin: 0 3vw;
+      margin-left: 3vw;
     }
   }
 }
