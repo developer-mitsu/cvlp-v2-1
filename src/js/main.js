@@ -13,18 +13,11 @@ $(function () {
 
 $(function() {
     var scrolledTop = 0
-    //下から表示させる要素を指定
-    var $footer = $('#js-scrollFt')
-    var $header = $('#js-scrollHdr')
-    //一定量スクロールするまで非表示
     $footer.hide();
     $(window).on( 'scroll', function () {
-      //スクロール位置を取得
       if ( scrolledTop <= $(this).scrollTop() ) {
-        //要素をスライド非表示
         $footer.slideDown('slow');
       } else {
-        //要素をスライド表示
         $footer.slideUp('slow');
       }
 
