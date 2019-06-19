@@ -13,6 +13,7 @@ $(function () {
 
 $(function() {
     var scrolledTop = 0
+    var $footer = $('#js-scrollFt')
     $footer.hide();
     $(window).on( 'scroll', function () {
       if ( scrolledTop <= $(this).scrollTop() ) {
