@@ -25,10 +25,6 @@
 .SCT__item {
     // text-align: center; 🤔??
     padding: 2.5rem 5px;
-
-    & + * {
-        // margin-top: 5rem;
-    }
     &:nth-child(even) {
         background-color: #FAFAFA;
     }

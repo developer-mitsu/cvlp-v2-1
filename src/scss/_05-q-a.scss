@@ -6,9 +6,14 @@
 .q-a {
   background-color: #fafafa;
   .common-item-wrap {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     @include pc {
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(28%, 1fr));
+    }
+    @include tab {
+      grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+    }
+    @include sp {
+      grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
     }
     grid-gap: 40px 8%;
   }
