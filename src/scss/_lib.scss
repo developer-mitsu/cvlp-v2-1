@@ -16,10 +16,10 @@
     }
   };
 
-$grd-toright :linear-gradient(to right, #FFC119,#FF016A);
-$grd-toleft :linear-gradient(to left, #FFC119,#FF016A);
-$grd-tobottom : linear-gradient(to bottom, #FFC119,#FF016A);
-$grd-totop : linear-gradient(to top, #FFC119,#FF016A);
+$grd-toright :linear-gradient(to right, #FFC119 ,#FF016A);
+$grd-toleft :linear-gradient(to left, #FFC119 ,#FF016A);
+$grd-tobottom : linear-gradient(to bottom, #FFC119 ,#FF016A);
+$grd-totop : linear-gradient(to top, #FFC119 ,#FF016A);
 $fc-white: #fff;
 $p-mg-b: 1.7em;
 
@@ -58,7 +58,30 @@ $voice-item-padtop--sp: $voice-img-w--sp/2;
   }
 }
 
+@keyframes button-idel-red {
+  0% {
+    box-shadow: 0 0  5px -10px #FF016A;
+  }
+  30% {
+    box-shadow: rgba(#FF016A, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 10px 10px rgba(#FF016A, 0);
+  }
+}
+
+@keyframes button-idel-in {
+
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
 @mixin main-btn($width, $height, $font-size: 1em, $opacity: 1) {
+  position: relative;
   color: $fc-white;
   font-weight: bold;
   font-size: $font-size;
@@ -68,7 +91,31 @@ $voice-item-padtop--sp: $voice-img-w--sp/2;
   height: $height;
   border-radius: $height / 2;
   background: linear-gradient(to right, rgba(#FFC119, $opacity),rgba(#FF016A, $opacity));
+
+  animation:
+    button-idel-red 3s  ease-in infinite normal,
+    button-idel-yellow 3s ease-in infinite normal
+    ;
+
+  &:before {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    background-color: white;
+    background-image: linear-gradient(to right,
+      rgba(0, 0, 0, .9) 25%,
+      rgba(0, 0, 0, .1) 50%,
+      rgba(0, 0, 0, .9) 75%);
+    color: white;
+    height: 100%;
+    width: 20%;
+    animation: 4s linear 0s infinite alternate button-idel-in;
+    }
   @content;
+  &:hover {
+  }
 }
 
 @mixin font-grd ($color: $grd-toright){
