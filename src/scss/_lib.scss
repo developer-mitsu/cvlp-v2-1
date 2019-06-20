@@ -70,16 +70,6 @@ $voice-item-padtop--sp: $voice-img-w--sp/2;
   }
 }
 
-@keyframes button-idel-in {
-
-  0% {
-    left: 0;
-  }
-  100% {
-    left: 100%;
-  }
-}
-
 @mixin main-btn($width, $height, $font-size: 1em, $opacity: 1) {
   position: relative;
   color: $fc-white;
@@ -91,30 +81,13 @@ $voice-item-padtop--sp: $voice-img-w--sp/2;
   height: $height;
   border-radius: $height / 2;
   background: linear-gradient(to right, rgba(#FFC119, $opacity),rgba(#FF016A, $opacity));
-
-  animation:
-    button-idel-red 3s  ease-in infinite normal,
-    button-idel-yellow 3s ease-in infinite normal
-    ;
-
-  &:before {
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    
-    background-color: white;
-    background-image: linear-gradient(to right,
-      rgba(0, 0, 0, .9) 25%,
-      rgba(0, 0, 0, .1) 50%,
-      rgba(0, 0, 0, .9) 75%);
-    color: white;
-    height: 100%;
-    width: 20%;
-    animation: 4s linear 0s infinite alternate button-idel-in;
-    }
+  animation: button-idel-red 2s  ease-in infinite normal;
   @content;
   &:hover {
+    color: #FFC119;
+    background: lighten(white, 30%);
+    border: 2px solid #FFC119;
+    transition: all ease-out 300ms;
   }
 }
 

@@ -9,4 +9,14 @@ $(function () {
             location.href = $(this).attr('data-url');
         })
     })
+
+    $('.hdline--main-btn').on({
+        'mouseenter': function () {
+            $('.play-icon').addClass('hover');
+        },
+        'mouseleave': function () {
+            $('.play-icon').removeClass('hover');
+        }
+    });
+
 })
