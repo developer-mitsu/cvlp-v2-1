@@ -30,6 +30,7 @@ $voice-item-padtop--tab: $voice-img-w--tab/2;
 $voice-img-w--sp: 300px;
 $voice-item-padtop--sp: $voice-img-w--sp/2;
 
+
 @mixin centering-lh($height){
   height: $height;
   line-height: $height;
