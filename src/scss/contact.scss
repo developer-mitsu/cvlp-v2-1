@@ -100,3 +100,16 @@
     }
   }
 }
+
+.privacy-link {
+  display: inline;
+  text-decoration: underline;
+  color: blue;
+  &:hover {
+    opacity: 0.8;
+    color: skyblue;
+  }
+  &:visited {
+    color: purple;
+  }
+}
