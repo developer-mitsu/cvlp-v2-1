@@ -16,10 +16,10 @@
     }
   };
 
-$grd-toright :linear-gradient(to right, #FFC119,#FF016A);
-$grd-toleft :linear-gradient(to left, #FFC119,#FF016A);
-$grd-tobottom : linear-gradient(to bottom, #FFC119,#FF016A);
-$grd-totop : linear-gradient(to top, #FFC119,#FF016A);
+$grd-toright :linear-gradient(to right, #FFC119 ,#FF016A);
+$grd-toleft :linear-gradient(to left, #FFC119 ,#FF016A);
+$grd-tobottom : linear-gradient(to bottom, #FFC119 ,#FF016A);
+$grd-totop : linear-gradient(to top, #FFC119 ,#FF016A);
 $fc-white: #fff;
 $p-mg-b: 1.7em;
 
@@ -58,7 +58,20 @@ $voice-item-padtop--sp: $voice-img-w--sp/2;
   }
 }
 
+@keyframes button-idel-red {
+  0% {
+    box-shadow: 0 0  5px -10px #FF016A;
+  }
+  30% {
+    box-shadow: rgba(#FF016A, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 10px 10px rgba(#FF016A, 0);
+  }
+}
+
 @mixin main-btn($width, $height, $font-size: 1em, $opacity: 1) {
+  position: relative;
   color: $fc-white;
   font-weight: bold;
   font-size: $font-size;
@@ -68,7 +81,14 @@ $voice-item-padtop--sp: $voice-img-w--sp/2;
   height: $height;
   border-radius: $height / 2;
   background: linear-gradient(to right, rgba(#FFC119, $opacity),rgba(#FF016A, $opacity));
+  animation: button-idel-red 2s  ease-in infinite normal;
   @content;
+  &:hover {
+    color: #FFC119;
+    background: lighten(white, 30%);
+    border: 2px solid #FFC119;
+    transition: all ease-out 300ms;
+  }
 }
 
 @mixin font-grd ($color: $grd-toright){

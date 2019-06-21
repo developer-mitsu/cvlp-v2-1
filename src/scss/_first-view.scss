@@ -116,18 +116,32 @@
   }
 }
 
+@keyframes fv-btn-shadow {
+  from {
+    box-shadow: 0 0 0 -10px rgba(white, 1);
+  }
+  to {
+    box-shadow: 0 0 10px 10px rgba(white, 0);
+  }
+  
+}
 
 .hdline--main-btn--shadow {
   @include main-btn(400px, 80px, 1em, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: fv-btn-shadow 3s infinite normal ;
   @include sp {
     @include main-btn(100%, 69px, 1em, 0.5);
   }
 }
+
+
 .hdline--main-btn {
   @include main-btn(375px, 55px);
+  transition: all ease-out 300ms;
+
   @include sp {
     @include main-btn(90%, 47px, 1em, 1);
   }
@@ -138,6 +152,19 @@
     display: inline-block;
     position: absolute;
     top: 0;
-    right: 2em;
+    right: 7em;
+    &.hover {// jQで実装
+      right: 2em;
+      transition: right ease-out 300ms;
+    }
+  }
+  &:hover {
+    width: 400px;
+    height: 80px;
+    border-radius: 80px;
+    line-height: 80px;
+    color: #FFC119;
+    background: lighten(white, 30%);
+    border: 2px solid #FFC119;
   }
 }
