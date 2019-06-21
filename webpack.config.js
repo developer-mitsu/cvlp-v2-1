@@ -15,6 +15,7 @@ module.exports = {
     student2: "./src/js/student2.js",
     student3: "./src/js/student3.js",
     student4: "./src/js/student4.js",
+    privacy: "./src/js/privacy.js"
   },
   output: {
     filename: `${fileName}.js`,
@@ -164,6 +165,11 @@ module.exports = {
       chunks: ["student4"],
       filename: "student4.html",
       template: "src/student4.ejs"
+    }),
+    new HtmlWebpackPlugin({
+      chunks: ["privacy"],
+      filename: "privacy.html",
+      template: "src/privacy.ejs"
     }),
     new CleanWebpackPlugin()
   ]

@@ -9,9 +9,7 @@ $(function () {
             location.href = $(this).attr('data-url');
         })
     })
-})
-
-$(function() {
+  
     var scrolledTop = 0
     var $footer = $('#js-scrollFt')
     $footer.hide();
@@ -24,4 +22,14 @@ $(function() {
 
       scrolledTop = $(this).scrollTop()
     });
-  });
+
+    $('.hdline--main-btn').on({
+        'mouseenter': function () {
+            $('.play-icon').addClass('hover');
+        },
+        'mouseleave': function () {
+            $('.play-icon').removeClass('hover');
+        }
+    });
+
+})
